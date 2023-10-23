@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     let ownerAddress = address;
 
+    ownerAddressElement.textContent= ownerAddress
+
     
     // Send Ethereum to an address
     sendButton.addEventListener('click', () => {
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function() {
           params: [
             {
               from: ownerAddress,
-              to: recipientAddressInput.placeholder, // Replace with recipient address
+              to: recipientAddressInput.placeholder, 
               value: amountInput.placeholder, // Replace with value in wei (1 ETH in wei)
               gasLimit: '0x5028',
               maxPriorityFeePerGas: '0x3b9aca00',
